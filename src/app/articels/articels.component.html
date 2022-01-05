@@ -1,0 +1,20 @@
+<p>articel works!</p>
+<div class="articles" *ngIf="articles.length">
+  <div class="article" *ngFor="let article of articles; st">
+    <p>title: {{ article.title }}</p>
+    <p>description: {{ article.description }}</p>
+    <p>content: {{ article.content }}</p>
+  </div>
+</div>
+<br /><br /><br />
+<h3>add new article</h3>
+<br />
+<form>
+  enter title:<input type="text" (change)="onTitleChange($event)" /><br />
+  enter description:<input
+    type="text"
+    (change)="onDescriptionChange($event)"
+  /><br />
+  enter content:<input type="text" (change)="onContentChange($event)" /><br />
+  <button (click)="createArticle($event)">create article</button>
+</form>
