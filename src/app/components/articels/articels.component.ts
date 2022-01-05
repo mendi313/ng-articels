@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { IArticle } from '../models/articel.intarface';
-import { ArticleApiService } from '../services/article-api.service';
+import { IArticle } from '../../models/articel.intarface';
+import { ArticleApiService } from '../../services/article-api.service';
 import { FormGroup, FormControl } from '@angular/forms';
 
 interface myData {
@@ -12,7 +12,7 @@ interface myData {
   templateUrl: './articels.component.html',
   styleUrls: ['./articels.component.scss'],
 })
-export class ArticelComponent implements OnInit {
+export class ArticelsComponent implements OnInit {
   constructor(private articleApiService: ArticleApiService) {}
 
   title: String = '';

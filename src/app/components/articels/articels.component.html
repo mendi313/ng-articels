@@ -1,5 +1,15 @@
-<p>articel works!</p>
-<div class="articles" *ngIf="articles.length">
+<!-- <app-articel></app-articel> -->
+<div class="articels" *ngIf="articles.length">
+  <div class="item-rap" *ngFor="let article of articles">
+    <mat-card-title>{{ article.title }}</mat-card-title>
+    <mat-card-subtitle>{{ article.description }}</mat-card-subtitle>
+    <mat-card-subtitle>{{ article.content }}</mat-card-subtitle>
+
+    <mat-divider></mat-divider>
+  </div>
+</div>
+
+<!-- <div class="articles" *ngIf="articles.length">
   <div class="article" *ngFor="let article of articles; st">
     <p>title: {{ article.title }}</p>
     <p>description: {{ article.description }}</p>
@@ -17,4 +27,4 @@
   /><br />
   enter content:<input type="text" (change)="onContentChange($event)" /><br />
   <button (click)="createArticle($event)">create article</button>
-</form>
+</form> -->
